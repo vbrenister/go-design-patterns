@@ -58,6 +58,6 @@ var lib *Library = &Library{
 func TestShouldIterate(t *testing.T) {
 	iterator := lib.createIterator()
 
-	assert.False(t, iterator.hasNext())
+	assert.True(t, iterator.hasNext())
 	assert.Equal(t, iterator.next(), &lib.Collection[0])
 }
