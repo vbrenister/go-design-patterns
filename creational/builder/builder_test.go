@@ -7,18 +7,17 @@ import (
 )
 
 const (
-	title = "Test Title"
+	title    = "Test Title"
 	subtitle = "Test Sub Title"
-	message = "Test message"
-	icon = "Test icon"
-	image = "Test image"
-	pri = 3
-	notType = "test not type"
-
+	message  = "Test message"
+	icon     = "Test icon"
+	image    = "Test image"
+	pri      = 3
+	notType  = "test not type"
 )
 
 func TestValidNotificationBuilder(t *testing.T) {
-    builder := newNotificationBuilder()
+	builder := newNotificationBuilder()
 
 	builder.SetTitle(title)
 	builder.SetSubtitle(subtitle)

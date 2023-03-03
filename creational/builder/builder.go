@@ -2,15 +2,14 @@ package builder
 
 import "fmt"
 
-
 type NotificaitonBuilder struct {
-	Title string
+	Title    string
 	SubTitle string
-	Message string
-	Image string
-	Icon string
+	Message  string
+	Image    string
+	Icon     string
 	Priority int
-	NotType string
+	NotType  string
 }
 
 func newNotificationBuilder() *NotificaitonBuilder {
@@ -20,7 +19,6 @@ func newNotificationBuilder() *NotificaitonBuilder {
 func (b *NotificaitonBuilder) SetTitle(title string) {
 	b.Title = title
 }
-
 
 func (b *NotificaitonBuilder) SetSubtitle(subtitle string) {
 	b.SubTitle = subtitle
@@ -50,14 +48,14 @@ func (b *NotificaitonBuilder) Build() (*Notificaiton, error) {
 	if b.Priority > 5 {
 		return nil, fmt.Errorf("priority can't be higher than 5")
 	}
-	
+
 	return &Notificaiton{
-		title: b.Title,
+		title:    b.Title,
 		subtitle: b.SubTitle,
-		message: b.Message,
-		image: b.Image,
-		icon: b.Icon,
+		message:  b.Message,
+		image:    b.Image,
+		icon:     b.Icon,
 		priority: b.Priority,
-		notType: b.NotType,
+		notType:  b.NotType,
 	}, nil
 }
