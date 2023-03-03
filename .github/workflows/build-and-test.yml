@@ -17,4 +17,9 @@ jobs:
         run: go build -v ./...
 
       - name: Test
-        run: go test -v ./...
+        run: go test -json ./... > TestResults-${{ steps.commit.outputs.short }}.json
+      - name: Upload Go test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: Go-results-${{ steps.commit.outputs.short }}
+          path: TestResults-${{ steps.commit.outputs.short }}.json
