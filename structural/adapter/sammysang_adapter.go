@@ -1,4 +1,4 @@
-package structural
+package adapter
 
 type sammysangAdapter struct {
 	sstv *SammysangTV

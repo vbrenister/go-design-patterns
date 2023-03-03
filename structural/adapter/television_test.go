@@ -1,4 +1,4 @@
-package structural
+package adapter
 
 import (
 	"testing"

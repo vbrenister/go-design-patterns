@@ -1,4 +1,4 @@
-package structural
+package adapter
 
 
 type SohneeTV struct {
